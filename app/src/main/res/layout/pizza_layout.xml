@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Pizza">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/AppName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
+        android:background="#B30000"
+        android:text="Verivery's Pizza House"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/searchbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/searchbar"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginBottom="62dp"
+        android:background="#D3D3D3"
+        android:hint="Search your flavors!"
+        android:paddingLeft="10dp"
+        android:textColor="#E9C593"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="96dp"
+        android:text="Hello Admin!"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="What do you want?"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/tv1"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+    <CheckBox
+        android:id="@+id/top3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="22dp"
+        android:text="Onions"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/top2"
+        app:layout_constraintTop_toTopOf="@+id/top2" />
+    <TextView
+        android:id="@+id/top_bg4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background=" #418D17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bg3" />
+    <RadioGroup
+        android:id="@+id/Pizza_Type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="#E9C590"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/PizzaType">
+        <RadioButton
+            android:id="@+id/f1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Hawaiian"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <RadioButton
+
+            android:id="@+id/f2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ham N Cheese"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/porder"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:text="Process Order"
+        app:layout_constraintEnd_toStartOf="@+id/norder"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/top4"
+        app:layout_constraintTop_toBottomOf="@+id/top_bg4" />
+
+    <TextView
+        android:id="@+id/ExtraToppings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#C33413"
+        android:paddingLeft="15dp"
+        android:text="Extra Toppings"
+        android:textColor="#EDEDED"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bg1" />
+    <TextView
+        android:id="@+id/CrustType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#9D5826"
+        android:paddingLeft="15dp"
+        android:text="Crust Type"
+        android:textColor="#040404"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Pizza_Size" />
+    <RadioGroup
+        android:id="@+id/Crust_Type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#E9C590"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CrustType">
+        <RadioButton
+
+            android:id="@+id/t1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Thin" />
+        <RadioButton
+            android:id="@+id/t2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Thick" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/top_bg1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background=" #418D17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Crust_Type" />
+    <TextView
+        android:id="@+id/top_bg2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E9C590"
+        app:layout_constraintBottom_toTopOf="@+id/top_bg3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ExtraToppings" />
+    <TextView
+        android:id="@+id/top_bg3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="#C33413"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top3" />
+    <TextView
+        android:id="@+id/PizzaSize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#9D5826"
+        android:paddingLeft="15dp"
+        android:text="Size"
+        android:textColor="#020202"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Pizza_Type" />
+    <CheckBox
+        android:id="@+id/top4"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="Tomatoes"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/top_bg2"
+        app:layout_constraintStart_toStartOf="@+id/top1" />
+
+    <Button
+        android:id="@+id/norder"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="New Order"
+        app:layout_constraintEnd_toEndOf="@+id/top_bg4"
+        app:layout_constraintTop_toBottomOf="@+id/top_bg4" />
+
+    <CheckBox
+        android:id="@+id/top2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:text="Mushrooms"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/top3"
+        app:layout_constraintStart_toEndOf="@+id/top1"
+        app:layout_constraintTop_toBottomOf="@+id/ExtraToppings" />
+    <CheckBox
+        android:id="@+id/top5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pineapple"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/top_bg2"
+        app:layout_constraintStart_toStartOf="@+id/top2" />
+    <CheckBox
+        android:id="@+id/top1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:text="Extra Cheese"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/top2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ExtraToppings" />
+    <RadioGroup
+        android:id="@+id/Pizza_Size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#E9C590"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PizzaSize">
+        <RadioButton
+            android:id="@+id/s1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Small" />
+        <RadioButton
+            android:id="@+id/s2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Medium" />
+        <RadioButton
+            android:id="@+id/s3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Large" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/PizzaType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="#9D5826"
+        android:paddingLeft="15dp"
+        android:text="Pizza"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#E9C590"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/porder"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="NotSibling">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="10sp"
+            android:text="Your order is:"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="35sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="10sp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/txt_size_crust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="60sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="10sp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="18sp"
+            android:layout_marginEnd="130sp"
+            android:layout_marginBottom="10sp"
+            android:text="Extra Toppings"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_toppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="60sp"
+            android:layout_marginBottom="50sp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+
+            android:layout_marginBottom="10sp"
+            android:text="Total:"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_sizecrust_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="275sp"
+            android:layout_marginBottom="115sp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txt_toppings_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="275sp"
+            android:layout_marginBottom="50sp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/txt_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="275sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="10sp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>
